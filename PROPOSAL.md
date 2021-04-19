@@ -24,3 +24,6 @@
 - Adding sound effects for different actions
 
 ## Friday
+- Ensure difficulty parameter with timing is working
+- Host on github pages
+- Check for bugs
