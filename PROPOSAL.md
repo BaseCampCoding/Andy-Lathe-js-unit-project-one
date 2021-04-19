@@ -17,6 +17,8 @@
 - Get the HTML/CSS for the play again/quit screen
 - Make a score that stays consistent with every time they replay how many wins they have
 
+jvnjvnjc
+
 ## Thursday
 
 ## Friday
