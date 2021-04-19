@@ -3,4 +3,3 @@ First unit project in Javascript, Lathe Ward and Andy Duarte
 
 Testing one two
 
-Andy Duarte
