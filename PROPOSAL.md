@@ -13,7 +13,7 @@
     - "Fire time" will be a small amount of time that varies based on chosen difficulty
     - In this thime, the user must click to win
     - If user does not click in this timeframe, they lose
-
+- Make sure characters react with javascript logic
 - Get the HTML/CSS for the play again/quit screen
 - Make a score that stays consistent with every time they replay how many wins they have
 
