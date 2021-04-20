@@ -18,14 +18,16 @@ canvas {
 <body onload="startGame()">
     <script>
     
-    var myGamePiece;
+    let myGamePiece;
+    let myGamePiece2
 
 function startGame() {
     myGamePiece = new component(200, 120, "cowboyStart1.png", 10, 120, "image");
+    myGamePiece2 = new component(200,120, "samurai.png",230,120,"image2")
     myGameArea.start();
 }
 
-var myGameArea = {
+let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 480;
@@ -45,7 +47,7 @@ var myGameArea = {
 
 function component(width, height, color, x, y, type) {
     this.type = type;
-    if (type == "image") {
+    if (type == "image" || type == "image2") {
         this.image = new Image();
         this.image.src = color;
     }
@@ -57,7 +59,7 @@ function component(width, height, color, x, y, type) {
     this.y = y;    
     this.update = function() {
         ctx = myGameArea.context;
-        if (type == "image") {
+        if (type == "image" || type == "image2") {
             ctx.drawImage(this.image, 
                 this.x, 
                 this.y,
@@ -75,11 +77,14 @@ function component(width, height, color, x, y, type) {
 
 function updateGameArea() {
     myGameArea.clear();
+    myGamePiece2.newPos();
+    myGamePiece2.update();
     myGamePiece.newPos();
     myGamePiece.update();
 }
 
 function move(dir) {
+   myGamePiece2.image.src = "samuraiStrike.png"
     myGamePiece.image.src = "cowboyShoot1.png";
     if (dir == "up") {
         
@@ -90,10 +95,13 @@ function move(dir) {
 
 function clearmove() {
     myGamePiece.image.src = "cowboyStart1.png";
-    myGamePiece.speedX = 0; 
-    myGamePiece.speedY = 0;
+    myGamePiece2.image.src = "samuraiStart.png"
+    
+    
     
 }
+
+
     
 </script>
 
@@ -101,12 +109,16 @@ function clearmove() {
 <body>
     
     
-    <button id="myBtn2" onmouseup="clearmove()" >Ready</button>
+    <button id="myBtn2" onmousedown="clearmove()" >Ready</button>
     <button id="myBtn" onmousedown="move('up')" >Fire away</button>
     <p id="testp">Click ready when ready, and fire to draw</p>
     <h5 id="score">Score: 0</h5>
+   
     
 </body>
+
+<script src="main.js"></script>
+</html>
 
 <script src="main.js"></script>
 </html>
