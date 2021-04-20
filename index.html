@@ -15,7 +15,7 @@ canvas {
 
     </style>
 </head>
-<<<<<<< HEAD
+
 <body onload="startGame()">
     <script>
     
@@ -67,45 +67,44 @@ canvas {
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
     }
-    this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;        
-    }
+    
 }
+
 function updateGameArea() {
     myGameArea.clear();
     myGamePiece.newPos();
     myGamePiece.update();
 }
 
-// function move(dir) {
-//     myGamePiece.image.src = "angry.gif";
-//     if (dir == "up") {myGamePiece.speedY = -1; }
-//     if (dir == "down") {myGamePiece.speedY = 1; }
-//     if (dir == "left") {myGamePiece.speedX = -1; }
-//     if (dir == "right") {myGamePiece.speedX = 1; }
-// }
+function move(dir) {
+    myGamePiece.image.src = "cowboyShoot.jpg";
+    if (dir == "up") {
+        
+    }
+    
+}
 
 function clearmove() {
-    myGamePiece.image.src = "cowboy.jpg";
+    myGamePiece.image.src = "cowboyStart.jpg";
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+
     
     
     
 </script>
 
 
-=======
+
 <body>
     
     
     <button id="myBtn2">Ready</button>
-    <button id="myBtn">Fire away</button>
+    <button id="myBtn" onmousedown="move('up')" >Fire away</button>
     <p id="testp">You haven't clicked it yet</p>
     
->>>>>>> 3a9d7c0e85fe7ca70a85d64199356631bab05805
+
 </body>
 
 <script src="main.js"></script>
