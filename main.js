@@ -6,25 +6,27 @@ let scoreCard = document.getElementById("score");
 readyButton.addEventListener("click", fireTime)
 
 function fireTime(){
+    let done = false
     let score = 0
     testThing.innerHTML = "Hold"
+    
+    function drawTime(){
+        testThing.innerHTML = "DRAW"
+    }
+    
+    function badFire(){
+        testThing.innerHTML = "Better luck next time. Click ready to play again.";
+        done = true
+    }
+
+    if(! badFire || done === false){
     function goodFire(){
         testThing.innerHTML = "You did it in time"; // Will change when victory conditional is set
         clearTimeout(notQuickEnough);
         score++
         scoreCard.innerHTML = `Score: ${score}`
-        done = true;
-    }
+    }}
 
-    function drawTime(){
-        testThing.innerHTML = "DRAW"
-    }
-
-    function badFire(){
-        testThing.innerHTML = "Better luck next time. Click ready to play again."; // Will change with loss conditional
-    }
-
-    let done = false;
     let drawNow = setTimeout(drawTime, 1000)
     let notQuickEnough = setTimeout(badFire, 2000)
 
