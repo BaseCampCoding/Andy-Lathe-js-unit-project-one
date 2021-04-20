@@ -21,7 +21,7 @@ canvas {
     var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(100, 60, "cowboyStart1.png", 10, 120, "image");
+    myGamePiece = new component(200, 120, "cowboyStart1.png", 10, 120, "image");
     myGameArea.start();
 }
 
@@ -84,13 +84,15 @@ function move(dir) {
     if (dir == "up") {
         
      }
+     
     
 }
 
 function clearmove() {
-    myGamePiece.image.src = "cowboyStart.png.gif";
+    myGamePiece.image.src = "cowboyStart1.png";
     myGamePiece.speedX = 0; 
-    myGamePiece.speedY = 0; 
+    myGamePiece.speedY = 0;
+    
 }
     
 </script>
@@ -99,7 +101,7 @@ function clearmove() {
 <body>
     
     
-    <button id="myBtn2">Ready</button>
+    <button id="myBtn2" onmouseup="clearmove()" >Ready</button>
     <button id="myBtn" onmousedown="move('up')" >Fire away</button>
     <p id="testp">Click ready when ready, and fire to draw</p>
     <h5 id="score">Score: 0</h5>
