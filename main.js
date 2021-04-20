@@ -22,7 +22,7 @@ function fireTime(){
 
     const tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message, with done preventing scoring
 
-    if(!badFire){
+    if(done === false){
         function goodFire(){
             testThing.innerHTML = "You did it! Click ready to play again";
             clearTimeout(tooLate);
