@@ -15,17 +15,13 @@ canvas {
 
     </style>
 </head>
-<<<<<<< HEAD
-
-=======
->>>>>>> 784e034d8eaa6faa815d55684e50acf3a6bcf77d
 <body onload="startGame()">
     <script>
     
     var myGamePiece;
     
     function startGame() {
-        myGamePiece = new component(60, 60, "cowboyStart.jpg", 400, 240, "image");
+        myGamePiece = new component(60, 60, "cowboyStart1.png", 400, 240, "image");
         myGameArea.start();
     }
     
@@ -80,7 +76,7 @@ function updateGameArea() {
 }
 
 function move(dir) {
-    myGamePiece.image.src = "cowboyShoot.jpg";
+    myGamePiece.image.src = "cowboyShoot1.png";
     if (dir == "up") {
         
     }
@@ -88,7 +84,7 @@ function move(dir) {
 }
 
 function clearmove() {
-    myGamePiece.image.src = "cowboyStart.jpg";
+    myGamePiece.image.src = "cowboyStart1.png";
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
@@ -99,10 +95,6 @@ function clearmove() {
 </script>
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 784e034d8eaa6faa815d55684e50acf3a6bcf77d
 <body>
     
     
@@ -110,10 +102,6 @@ function clearmove() {
     <button id="myBtn" onmousedown="move('up')" >Fire away</button>
     <p id="testp">You haven't clicked it yet</p>
     
-<<<<<<< HEAD
-
-=======
->>>>>>> 784e034d8eaa6faa815d55684e50acf3a6bcf77d
 </body>
 
 <script src="main.js"></script>
