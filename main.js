@@ -1,15 +1,18 @@
 const fireButton = document.getElementById("myBtn");
 const readyButton = document.getElementById("myBtn2");
 let testThing = document.getElementById("testp");
+let scoreCard = document.getElementById("score");
 
 readyButton.addEventListener("click", fireTime)
 
 function fireTime(){
-
+    let score = 0
     testThing.innerHTML = "Hold"
     function goodFire(){
         testThing.innerHTML = "You did it in time"; // Will change when victory conditional is set
         clearTimeout(notQuickEnough);
+        score++
+        scoreCard.innerHTML = `Score: ${score}`
         done = true;
     }
 
