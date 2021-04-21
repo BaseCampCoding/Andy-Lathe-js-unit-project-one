@@ -11,6 +11,28 @@ canvas {
     border:1px solid #d3d3d3;
     background-color: #f1f1f1;
 }
+.ab-button {
+  background-color: rgb(78,70,68);
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px black, inset 2px 2px 2px darkgray, -1px -1px 2px black;
+  font-family: "Gill Sans", sans-serif;
+  color: rgb(55,40,47);
+  text-shadow: 1px 1px 1px rgb(89,79,77);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+.a {
+  right: 450px;
+  top: 400px;
+color:black;
+}
+.b{
+    right: 550px;
+    top: 450px;
+    color: black;
+}
 
 
     </style>
@@ -30,8 +52,11 @@ function startGame() {
 let myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
+        this.canvas.width = 380;
         this.canvas.height = 270;
+        this.canvas.style.left = "450px";
+        this.canvas.style.top = "100px";
+        this.canvas.style.position = "absolute";
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -109,11 +134,11 @@ function clearmove() {
 <body>
     
     
-    <button id="myBtn2" onmousedown="clearmove()" >Ready</button>
-    <button id="myBtn" onmousedown="move('up')" >Fire</button>
-    <button id="resetButton">Reset</button>
+    <button class = "ab-button b" id="myBtn2" onmousedown="clearmove()" >Ready</button>
+    <button class="ab-button a" id="myBtn" onmousedown="move('up')" >Fire away</button>
     <p id="testp">Click ready when ready, and fire to draw</p>
-    <h5 id="thescore">Score: 0</h5>
+    <h5 id="score">Score: 0</h5>
+   
     
 </body>
 
