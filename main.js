@@ -47,6 +47,7 @@ function fireTime(){
     if(goodFire){
         scoreAmount += 1
     }
+    
 
     
 

@@ -108,19 +108,35 @@ function updateGameArea() {
     myGamePiece.update();
 }
 
+
+var sampleVar;
+
+function sampleFunction(){    
+  sampleVar = setTimeout(alertFunc, 2000);
+}
+
+function alertFunc(){    
+  myGamePiece2.image.src = "samuraiStrike.png"
+
+}
+
+
 function move(dir) {
-   myGamePiece2.image.src = "samuraiStrike.png"
-    myGamePiece.image.src = "cowboyShoot1.png";
+//    myGamePiece2.image.src = "samuraiStrike.png"
     if (dir == "up") {
-        
-     }
+    myGamePiece.image.src = "cowboyShoot1.png";
+    }
+    
+     
      
     
 }
 
-function clearmove() {
+function clearmove(dir) {
+    if(dir == "ready"){
     myGamePiece.image.src = "cowboyStart1.png";
     myGamePiece2.image.src = "samuraiStart.png"
+    }
     
     
     
@@ -134,7 +150,7 @@ function clearmove() {
 <body>
     
     
-    <button class = "ab-button b" id="myBtn2" onmousedown="clearmove()" >Ready</button>
+    <button class = "ab-button b" id="myBtn2" onmousedown="clearmove('ready')" onmouseup="sampleFunction()">Ready</button>
     <button class="ab-button a" id="myBtn" onmousedown="move('up')" >Fire away</button>
     <button id="resetButton">Reset</button>
     <p id="testp">Click ready when ready, and fire to draw</p>
