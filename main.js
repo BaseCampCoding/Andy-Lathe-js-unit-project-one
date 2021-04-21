@@ -2,10 +2,17 @@ const fireButton = document.getElementById("myBtn");
 const readyButton = document.getElementById("myBtn2");
 const testThing = document.getElementById("testp");
 const scoreCard = document.getElementById("thescore");
+const resetScore = document.getElementById("resetButton");
 
 readyButton.addEventListener("click", fireTime)
 let scoreAmount = 0
 
+resetScore.addEventListener("click", resetTheScore)
+    function resetTheScore(){
+        scoreAmount = 0
+        console.log(scoreAmount)
+        scoreCard.innerHTML = `Score: ${scoreAmount}`
+    }
 function fireTime(){
     let done = false
     testThing.innerHTML = "Hold"
@@ -26,7 +33,6 @@ if(done === false){
     function goodFire(){
         testThing.innerHTML = "You did it! Click ready to play again";
         clearTimeout(tooLate);
-        console.log(scoreAmount)
         scoreCard.innerHTML = `Score: ${scoreAmount}`
         
     }
@@ -37,6 +43,7 @@ if(done === false){
         scoreAmount += 1
     }
 
+    
 
     // if (difficulty === 1){
     //     notQuickEnough = setTimeout(badFire, 2000)
