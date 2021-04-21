@@ -43,8 +43,7 @@ if (type == "image" || type == "image2") {
 }
 this.width = width;
 this.height = height;
-this.speedX = 0;
-this.speedY = 0;    
+  
 this.x = x;
 this.y = y;    
 this.update = function() {
@@ -59,17 +58,12 @@ this.update = function() {
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
-this.newPos = function() {
-    this.x += this.speedX;
-    this.y += this.speedY;        
-}
+
 }
 
 function updateGameArea() {
 myGameArea.clear();
-myGamePiece2.newPos();
 myGamePiece2.update();
-myGamePiece.newPos();
 myGamePiece.update();
 }
 
