@@ -4,8 +4,11 @@ const testThing = document.getElementById("testp");
 const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
 
+
+
 readyButton.addEventListener("click", fireTime)
-let scoreAmount = 0
+let scoreAmount = 1
+let difficulty = 1
 
 resetScore.addEventListener("click", resetTheScore)
     function resetTheScore(){
@@ -23,18 +26,19 @@ function fireTime(){
 
     function badFire(){
         testThing.innerHTML = "Better luck next time. Click ready to play again.";
+        clearTimeout(drawTimeout)
         done = true
     }
 
-    var tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message, with done preventing scoring
-
+    let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
     if(done === false){
         function goodFire(){
             clearTimeout(tooLate);
-            clearTimeout(drawTimeout)
+            clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
                 testThing.innerHTML = "You did it! Click ready to play again";
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
+                scoreAmount += 1
             }
             else if(testThing.innerHTML === "Hold"){
                 testThing.innerHTML = "Too soon! Click ready to try again"
@@ -49,19 +53,19 @@ function fireTime(){
     }
     
 
-    
+    //Difficulty possibilities
 
     // if (difficulty === 1){
-    //     notQuickEnough = setTimeout(badFire, 2000)
-    //     drawNow = setTimeout(drawTime, 1000)
+    //     tooLate = setTimeout(badFire, 2000)
+    //     drawTimeout = setTimeout(drawTime, 1000)
         
     // }
-    // if (difficulty === 2){
-    //     notQuickEnough = setTimeout(badFire, 1000)
-    //     drawNow = setTimeout(drawTime, 600)
+    // else if (difficulty === 2){
+    //     tooLate = setTimeout(badFire, 1000)
+    //     drawTimeout = setTimeout(drawTime, 600)
     // }
-    // if (difficulty === 3){
-    //     notQuickEnough = setTimeout(badFire, 400)
-    //     drawNow = setTimeout(drawTime, 300)
+    // else if (difficulty === 3){
+    //     tooLate = setTimeout(badFire, 400)
+    //     drawTimeout = setTimeout(drawTime, 300)
     // }
 }
