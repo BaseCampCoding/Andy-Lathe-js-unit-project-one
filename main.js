@@ -8,6 +8,7 @@ const resetScore = document.getElementById("resetButton");
 
 readyButton.addEventListener("click", fireTime)
 let scoreAmount = 1
+let difficulty = 1
 
 resetScore.addEventListener("click", resetTheScore)
     function resetTheScore(){
@@ -29,12 +30,11 @@ function fireTime(){
         done = true
     }
 
-    var tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message, with done preventing scoring
-
+    let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
     if(done === false){
         function goodFire(){
             clearTimeout(tooLate);
-            clearTimeout(drawTimeout)
+            clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
                 testThing.innerHTML = "You did it! Click ready to play again";
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
@@ -49,19 +49,19 @@ function fireTime(){
     }
     
 
-    
+    //Difficulty possibilities
 
-    if (difficulty === 1){
-        tooLate = setTimeout(badFire, 2000)
-        drawTimeout = setTimeout(drawTime, 1000)
+    // if (difficulty === 1){
+    //     tooLate = setTimeout(badFire, 2000)
+    //     drawTimeout = setTimeout(drawTime, 1000)
         
-    }
-    else if (difficulty === 2){
-        tooLate = setTimeout(badFire, 1000)
-        drawTimeout = setTimeout(drawTime, 600)
-    }
-    else if (difficulty === 3){
-        tooLate = setTimeout(badFire, 400)
-        drawTimeout = setTimeout(drawTime, 300)
-    }
+    // }
+    // else if (difficulty === 2){
+    //     tooLate = setTimeout(badFire, 1000)
+    //     drawTimeout = setTimeout(drawTime, 600)
+    // }
+    // else if (difficulty === 3){
+    //     tooLate = setTimeout(badFire, 400)
+    //     drawTimeout = setTimeout(drawTime, 300)
+    // }
 }
