@@ -20,7 +20,7 @@ start : function() {
     this.canvas.width = 475;
     this.canvas.height = 270;
     this.canvas.style.left = "410px";
-    this.canvas.style.top = "100px";
+    this.canvas.style.top = "2rem";
     this.canvas.style.position = "sticky";
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);

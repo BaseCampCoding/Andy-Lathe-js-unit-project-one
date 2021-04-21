@@ -11,7 +11,7 @@ canvas {
   text-shadow: 1px 1px 1px rgb(89,79,77);
   height: 50px;
   width: 50px;
-  position: absolute;
+  position: sticky;
 }
 
 .a {
@@ -23,5 +23,11 @@ color:black;
     right: 550px;
     top: 450px;
     color: black;
+}
+
+.displayInfo{
+    display: flex;
+    justify-content: center;
+    text-align: center;   
 }
 
