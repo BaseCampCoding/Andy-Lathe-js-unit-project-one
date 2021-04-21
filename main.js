@@ -20,22 +20,24 @@ function badFire(){
     done = true
 }
 
-const tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message, with done preventing scoring
+var tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message, with done preventing scoring
 
 if(done === false){
     function goodFire(){
         testThing.innerHTML = "You did it! Click ready to play again";
         clearTimeout(tooLate);
-        scoreAmount += 1
         console.log(scoreAmount)
         scoreCard.innerHTML = `Score: ${scoreAmount}`
         
     }
     fireButton.addEventListener("click", goodFire)
+}
+    
+    if(goodFire){
+        scoreAmount += 1
     }
-    
 
-    
+
     // if (difficulty === 1){
     //     notQuickEnough = setTimeout(badFire, 2000)
     //     drawNow = setTimeout(drawTime, 1000)
