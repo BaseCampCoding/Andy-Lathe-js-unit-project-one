@@ -17,11 +17,11 @@ myGameArea.start();
 let myGameArea = {
 canvas : document.createElement("canvas"),
 start : function() {
-    this.canvas.width = 380;
+    this.canvas.width = 475;
     this.canvas.height = 270;
-    this.canvas.style.left = "450px";
+    this.canvas.style.left = "410px";
     this.canvas.style.top = "100px";
-    this.canvas.style.position = "absolute";
+    this.canvas.style.position = "sticky";
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
     this.frameNo = 0;
@@ -107,7 +107,7 @@ myGamePiece2.image.src = "samuraiStart.png"
 
 }
 
-
+//Game logic ------------
 
 readyButton.addEventListener("click", fireTime)
 let scoreAmount = 1
