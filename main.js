@@ -93,7 +93,6 @@ myGamePiece.image.src = "cowboyShoot1.png";
 }
 
  
- 
 
 }
 
@@ -110,7 +109,7 @@ myGamePiece2.image.src = "samuraiStart.png"
 //Game logic ------------
 
 readyButton.addEventListener("click", fireTime)
-let scoreAmount = 1
+let scoreAmount = 0
 let difficulty = 1
 
 resetScore.addEventListener("click", resetTheScore)
@@ -141,7 +140,6 @@ function fireTime(){
             if(testThing.innerHTML === "DRAW"){
                 testThing.innerHTML = "You did it! Click ready to play again";
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
-                scoreAmount += 1
             }
             else if(testThing.innerHTML === "Hold"){
                 testThing.innerHTML = "Too soon! Click ready to try again"
