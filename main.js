@@ -5,12 +5,6 @@ const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
 
    
-let myGamePiece = new Image()
-let myGamePiece2 = new Image()
-
-myGamePiece.src = "cowboyStart1.png";
-myGamePiece2.src = "samuraiStart.png";
-
 
 
 
