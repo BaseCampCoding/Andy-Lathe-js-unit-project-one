@@ -1,9 +1,29 @@
-#myCanvas {
-    border:1px solid #d3d3d3;
+.gameboy {
+    height: 30rem;
+    width: 40rem;
+    border:1px solid black;
     background-color:lightgrey;
-    position:sticky;
-    top: 10%;
-    left: 35%;
+    
+}
+
+#cowboy{
+    height: 40px;
+    width: 40px;
+}
+
+#cowboy img{
+    height: 100%;
+    
+}
+
+#samurai{
+    height: 100px;
+    width: 100px;
+
+}
+
+#samurai img{
+    height: 100%;
     
 }
 .ab-button {

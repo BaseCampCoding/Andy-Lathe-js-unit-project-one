@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="index.css">
    
 </head>
-<!-- <body onload="startGame()"> -->
-<canvas width="375px" height="200"  id= "myCanvas"></canvas>
+<div class="gameboy">
+    <div class="screen">
+        <div id="cowboy" ><img src="cowboyStart1.png"></div>
+        <div id="samurai"><img  src="samuraiStart.png"></div>
+    </div>
+    <div class="resetButton"><button id="resetButton" >Reset</button></div>
+    <div><button id="myBtn2">Ready</button></div>
+    <div><button id="myBtn">Fire away</button></div>
+
+</div>
 
 <body>
 
-    <button class = "ab-button b" id="myBtn2" onmousedown="clearmove('ready')" onmouseup="sampleFunction()">Ready</button>
-    <button class="ab-button a" id="myBtn" onmousedown="move('up')" >Fire away</button>
-    <button id="resetButton" class="ab-button a">Reset</button>
+    
+    
+    
 
     <div class="displayInfo">
         <p id="testp">Click ready when ready, and fire to draw</p>
