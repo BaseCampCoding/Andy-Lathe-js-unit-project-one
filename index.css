@@ -1,14 +1,28 @@
 .gameboy {
-    height: 30rem;
-    width: 40rem;
+    display: inline-grid;
+    height: 35rem;
+    width: 30rem;
     border:1px solid black;
-    background-color:lightgrey;
-    
+    background-color:red;
+    grid-template-areas: 
+    ". s s s s ."
+    ". s s s s ."
+    "m . . . . e"
+    ". r . a b .";
+}
+
+.screen{
+    height: 17rem;
+    width: 24rem;
+    background-color: lightgray;
+    margin-top: 2rem;
+    grid-area: s;
 }
 
 #cowboy{
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
+    grid-area: m;
 }
 
 #cowboy img{
@@ -19,6 +33,7 @@
 #samurai{
     height: 100px;
     width: 100px;
+    grid-area: e;
 
 }
 
@@ -26,6 +41,20 @@
     height: 100%;
     
 }
+
+#myBtn{
+    grid-area: a
+}
+
+#myBtn2{
+    grid-area: b
+}
+
+.resetButton{
+    grid-area: r
+}
+
+
 .ab-button {
   background-color: rgb(78,70,68);
   border-radius: 50%;
@@ -33,21 +62,12 @@
   font-family: "Gill Sans", sans-serif;
   color: rgb(55,40,47);
   text-shadow: 1px 1px 1px rgb(89,79,77);
-  height: 50px;
-  width: 50px;
-  position: sticky;
+  height: 60px;
+  width: 60px;
+
 }
 
-.a {
-  right: 450px;
-  top: 600px;
-color:black;
-}
-.b{
-    right: 550px;
-    top: 600px;
-    color: black;
-}
+
 
 .displayInfo{
     display: flex;
