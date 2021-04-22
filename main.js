@@ -26,15 +26,15 @@ function fireTime(){
     function badFire(){
         testThing.innerHTML = "Better luck next time. Click ready to play again.";
         clearTimeout(drawTimeout)
+        imageS.src = "samuraiSwing.png"
         done = true
     }
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
     if(done === false){
         function goodFire(){
-            let imageC = document.getElementById('cowboy1')
+            
             imageC.src = "cowboyShoot1.png"
-            let imageS = document.getElementById('samurai1')
-            imageS.src = "samuraiSwing.png"
+            
             clearTimeout(tooLate);
             clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
