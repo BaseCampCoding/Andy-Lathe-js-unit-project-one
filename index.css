@@ -68,6 +68,19 @@
 .resetButton{
     grid-area: r;
 }
+.pill-button{
+    background-color: rgb(78,70,68);
+    border-radius: 8px/70%;
+    box-shadow: 2px 2px 2px black, inset 2px 1px 2px darkgray, -1px -1px 2px black;
+    color: rgb(55,40,47);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 9px;
+    text-shadow: 1px 1px rgb(89,79,77), -1px -1px .5px rgb(89,79,77);
+    height: 25px;
+    width: 50px;
+    position: absolute;
+    bottom: 92px;
+}
 
 
 .ab-button {
