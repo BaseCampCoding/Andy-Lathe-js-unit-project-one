@@ -3,16 +3,20 @@ const readyButton = document.getElementById("myBtn2");
 const testThing = document.getElementById("testp");
 const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
+
 //Game logic ------------
 readyButton.addEventListener("click", fireTime)
 let scoreAmount = 0
-let difficulty = 1
 resetScore.addEventListener("click", resetTheScore)
     function resetTheScore(){
         scoreAmount = 0
         scoreCard.innerHTML = `Score: ${scoreAmount}`
     }
 function fireTime(){
+    let imageC = document.getElementById('cowboy1')
+    imageC.src = "cowboyStart1.png"
+    let imageS = document.getElementById('samurai1')
+    imageS.src = "samuraiStart.png"
     let done = false
     testThing.innerHTML = "Hold"
     function drawTime(){
