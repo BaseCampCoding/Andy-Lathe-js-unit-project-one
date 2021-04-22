@@ -13,7 +13,9 @@
   ". s s s s ."
   ". s s s s ."
   ". . . . . ."
-  ". r . a b .";
+  ". r . a b ."
+  ". . . . . ."
+  ". . . . . .";
 }
 .screen{
   display: grid;
@@ -25,7 +27,8 @@
   border:3px solid black;
   height: 17rem;
   width: 26rem;
-  background-color: lightgray;
+  background-image:url("desert.jpg");
+  background-size: cover;
   margin-top: 1rem;
   margin-left: 1.9rem;
   margin-right: 1rem;
@@ -63,20 +66,19 @@
   grid-area: r;
 }
 .pill-button{
-  background-color: rgb(78,70,68);
+  background-color: rgb(199, 182, 177);
   border-radius: 8px/70%;
   box-shadow: 2px 2px 2px black, inset 2px 1px 2px darkgray, -1px -1px 2px black;
   color: white;
   font-family: "Gill Sans", sans-serif;
-  font-size: 9px;
-  text-shadow: 1px 1px rgb(89,79,77), -1px -1px .5px rgb(89,79,77);
+  font-size: 12px;
   height: 30px;
   width: 70px;
   position: absolute;
   bottom: 92px;
 }
 .ab-button {
-background-color: rgb(78,70,68);
+background-color: rgb(199, 182, 177);
 border-radius: 50%;
 box-shadow: 2px 2px 2px black, inset 2px 2px 2px darkgray, -1px -1px 2px black;
 font-family: "Gill Sans", sans-serif;
