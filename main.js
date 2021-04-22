@@ -59,10 +59,7 @@ function fireTime(){
     if(goodFire){
         scoreAmount += 1     
     }
-    function change(){
-        let image = document.getElementById('cowboy1')
-        image.src = "cowboyShoot1.png"
-    }
+    
    
     
     //Difficulty possibilities
