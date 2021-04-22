@@ -68,6 +68,14 @@ body {
     grid-area: b;
     margin-right: 4rem;
 }
+
+.muteBtn{
+    background-color: rgb(160, 50, 31);
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin: 40px 20px 20px 20px;
+}
 .resetButton{
     grid-area: r;
     margin-left: 4rem;

@@ -3,10 +3,22 @@ const readyButton = document.getElementById("myBtn2");
 const testThing = document.getElementById("testp");
 const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
+const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
+const muteMusic = document.getElementById("mute");
+
 
 
 //Game logic ------------
+function playMusic(){
+    BigIron.play()
+}
+
+muteMusic.addEventListener("click", pauseMusic)
+function pauseMusic(){
+    BigIron.pause()
+}
+
 readyButton.addEventListener("click", fireTime)
 let scoreAmount = 0
 resetScore.addEventListener("click", resetTheScore)
@@ -34,8 +46,8 @@ function fireTime(){
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
     if(done === false){
         function goodFire(){
-            bangSound.play()
             imageC.src = "cowboyShoot1.png"
+            bangSound.play()
             clearTimeout(tooLate);
             clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
