@@ -65,10 +65,12 @@ body {
   grid-area: a;
 }
 #myBtn2{
-  grid-area: b;
+    grid-area: b;
+    margin-right: 4rem;
 }
 .resetButton{
-  grid-area: r;
+    grid-area: r;
+    margin-left: 4rem;
 }
 .pill-button{
   background-color: rgb(199, 182, 177);
