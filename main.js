@@ -8,97 +8,97 @@ const resetScore = document.getElementById("resetButton");
 let myGamePiece;
 let myGamePiece2
 
-function startGame() {
-myGamePiece = new component(200, 120, "cowboyStart1.png", 10, 120, "image");
-myGamePiece2 = new component(200,120, "samuraiStart.png",230,120,"image2")
-myGameArea.start();
-}
+// function startGame() {
+// myGamePiece = new component(200, 120, "cowboyStart1.png", 10, 120, "image");
+// myGamePiece2 = new component(200,120, "samuraiStart.png",230,120,"image2")
+// myGameArea.start();
+// }
 
-let myGameArea = {
-canvas : document.createElement("canvas"),
-start : function() {
-    this.canvas.width = 475;
-    this.canvas.height = 270;
-    this.canvas.style.left = "410px";
-    this.canvas.style.top = "2rem";
-    this.canvas.style.position = "sticky";
-    this.context = this.canvas.getContext("2d");
-    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-    this.frameNo = 0;
-    this.interval = setInterval(updateGameArea, 20);
-    },
-clear : function() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-},
-stop : function() {
-    clearInterval(this.interval);
-}
-}
+// let myGameArea = {
+// canvas : document.createElement("canvas"),
+// start : function() {
+//     this.canvas.width = 475;
+//     this.canvas.height = 270;
+//     this.canvas.style.left = "410px";
+//     this.canvas.style.top = "2rem";
+//     this.canvas.style.position = "sticky";
+//     this.context = this.canvas.getContext("2d");
+//     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+//     this.frameNo = 0;
+//     this.interval = setInterval(updateGameArea, 20);
+//     },
+// clear : function() {
+//     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+// },
+// stop : function() {
+//     clearInterval(this.interval);
+// }
+// }
 
-function component(width, height, color, x, y, type) {
-this.type = type;
-if (type == "image" || type == "image2") {
-    this.image = new Image();
-    this.image.src = color;
-}
-this.width = width;
-this.height = height;
+// function component(width, height, color, x, y, type) {
+// this.type = type;
+// if (type == "image" || type == "image2") {
+//     this.image = new Image();
+//     this.image.src = color;
+// }
+// this.width = width;
+// this.height = height;
   
-this.x = x;
-this.y = y;    
-this.update = function() {
-    ctx = myGameArea.context;
-    if (type == "image" || type == "image2") {
-        ctx.drawImage(this.image, 
-            this.x, 
-            this.y,
-            this.width, this.height);
-    } else {
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
-}
+// this.x = x;
+// this.y = y;    
+// this.update = function() {
+//     ctx = myGameArea.context;
+//     if (type == "image" || type == "image2") {
+//         ctx.drawImage(this.image, 
+//             this.x, 
+//             this.y,
+//             this.width, this.height);
+//     } else {
+//         ctx.fillStyle = color;
+//         ctx.fillRect(this.x, this.y, this.width, this.height);
+//     }
+// }
 
-}
+// }
 
-function updateGameArea() {
-myGameArea.clear();
-myGamePiece2.update();
-myGamePiece.update();
-}
-
-
-var sampleVar;
-
-function sampleFunction(){    
-sampleVar = setTimeout(alertFunc, 2000);
-}
-
-function alertFunc(){    
-myGamePiece2.image.src = "samuraiStrike.png"
-
-}
+// function updateGameArea() {
+// myGameArea.clear();
+// myGamePiece2.update();
+// myGamePiece.update();
+// }
 
 
-function move(dir) {
-//    myGamePiece2.image.src = "samuraiStrike.png"
-if (dir == "up") {
-myGamePiece.image.src = "cowboyShoot1.png";
-}
+// var sampleVar;
+
+// function sampleFunction(){    
+// sampleVar = setTimeout(alertFunc, 2000);
+// }
+
+// function alertFunc(){    
+// myGamePiece2.image.src = "samuraiStrike.png"
+
+// }
+
+
+// function move(dir) {
+// //    myGamePiece2.image.src = "samuraiStrike.png"
+// if (dir == "up") {
+// myGamePiece.image.src = "cowboyShoot1.png";
+// }
 
  
 
-}
+// }
 
-function clearmove(dir) {
-if(dir == "ready"){
-myGamePiece.image.src = "cowboyStart1.png";
-myGamePiece2.image.src = "samuraiStart.png"
-}
+// function clearmove(dir) {
+// if(dir == "ready"){
+// myGamePiece.image.src = "cowboyStart1.png";
+// myGamePiece2.image.src = "samuraiStart.png"
+// }
 
 
 
-}
+// }
 
 //Game logic ------------
 
