@@ -8,17 +8,22 @@
     grid-template-areas: 
     ". s s s s ."
     ". s s s s ."
-    "m . . . . e"
+    ". . . . . ."
     ". r . a b .";
 }
 
 .screen{
+    display: grid;
+    grid-template-areas:
+    ". . . . ."
+    ". . . . ."
+    "i . . q .";
     border:3px solid black;
     height: 17rem;
-    width: 25rem;
+    width: 26rem;
     background-color: lightgray;
     margin-top: 1rem;
-    margin-left: 1.7rem;
+    margin-left: 1.9rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     grid-area: s
@@ -30,8 +35,10 @@
 }
 
 #cowboy{
+    display: grid;
     height: 100px;
     width: 100px;
+    grid-area: i
     
 }
 
@@ -43,7 +50,7 @@
 #samurai{
     height: 100px;
     width: 100px;
-    margin-right: 4rem;
+    grid-area: q
 }
 
 #samurai img{
