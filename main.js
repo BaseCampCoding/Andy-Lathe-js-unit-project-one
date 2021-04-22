@@ -36,10 +36,6 @@ function fireTime(){
 
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
     if(done === false){
-        function change(){
-            let image = document.getElementById('cowboy')
-            image.src = "cowboyShoot1.png"
-        }
         function goodFire(){
             clearTimeout(tooLate);
             clearTimeout(drawTimeout);
@@ -57,6 +53,10 @@ function fireTime(){
     
     if(goodFire){
         scoreAmount += 1     
+    }
+    function change(){
+        let image = document.getElementById('cowboy1')
+        image.src = "cowboyShoot1.png"
     }
    
     
