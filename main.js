@@ -5,6 +5,7 @@ const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
 const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
+const death = document.getElementById("death")
 const muteMusic = document.getElementById("mute");
 
 
@@ -41,6 +42,7 @@ function fireTime(){
         testThing.innerHTML = "Better luck next time. Click ready to play again.";
         clearTimeout(drawTimeout)
         imageS.src = "samuraiSwing.png"
+        death.play()
         done = true
     }
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
