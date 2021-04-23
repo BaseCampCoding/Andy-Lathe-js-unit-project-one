@@ -7,8 +7,9 @@ const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
 const death = document.getElementById("death")
 const muteMusic = document.getElementById("mute");
-
-
+const cowboy1 = document.getElementById("cowboy1");
+let imageC = document.getElementById('cowboy1');
+let imageS = document.getElementById('samurai1');
 
 //Game logic ------------
 function playMusic(){
@@ -28,9 +29,7 @@ resetScore.addEventListener("click", resetTheScore)
         scoreCard.innerHTML = `Score: ${scoreAmount}`
     }
 function fireTime(){
-    let imageC = document.getElementById('cowboy1')
     imageC.src = "cowboyStart1.png"
-    let imageS = document.getElementById('samurai1')
     imageS.src = "samuraiStart.png"
     let done = false
     testThing.innerHTML = "Hold"
@@ -43,6 +42,8 @@ function fireTime(){
         clearTimeout(drawTimeout)
         imageS.src = "samuraiSwing.png"
         death.play()
+        cowboy1.style.animation="deathMove 2s";
+        
         done = true
     }
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message

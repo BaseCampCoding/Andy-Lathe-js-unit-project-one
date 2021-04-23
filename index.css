@@ -107,3 +107,9 @@ width: 60px;
 #thescore{
   font-family: 'VT323', monospace;
 }
+
+@keyframes deathMove
+{ 
+    from { opacity   : 1; }
+    to   { opacity   : 0.20; }
+}
