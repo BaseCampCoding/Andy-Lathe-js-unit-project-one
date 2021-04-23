@@ -7,14 +7,12 @@ const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
 const death = document.getElementById("death")
 const muteMusic = document.getElementById("mute");
-<<<<<<< HEAD
 const playSong = document.getElementById("playMusic")
 
 
 
 //Game logic ------------
 playSong.addEventListener("click",playMusic)
-=======
 const cowboy1 = document.getElementById("cowboy1");
 const samurai1 = document.getElementById("samurai1");
 let imageC = document.getElementById('cowboy1');
@@ -22,7 +20,6 @@ let imageS = document.getElementById('samurai1');
 
 //Game logic ------------
 
->>>>>>> fae958f321cc788293ba0c824fd40622680316ca
 function playMusic(){
     BigIron.play()
 }

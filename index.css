@@ -69,6 +69,10 @@ body {
     margin-right: 4rem;
 }
 
+.musicbuttons{
+    display: flex;
+}
+
 .muteBtn{
     background-color: rgb(160, 50, 31);
     color: white;
@@ -79,6 +83,9 @@ body {
 .playBtn{
   background-color: rgb(160, 50, 31);
   color: white;
+  width: 60px;
+    height: 60px;
+    margin: 40px 20px 20px 20px;
 }
 
 .resetButton{
@@ -112,8 +119,6 @@ width: 60px;
 #thescore{
   font-family: 'VT323', monospace;
 }
-<<<<<<< HEAD
-=======
 
 @keyframes CdeathMove
 { 
@@ -126,4 +131,3 @@ width: 60px;
     50%{ left : 100%;}
     100%{ left: 0;}
 }
->>>>>>> fae958f321cc788293ba0c824fd40622680316ca
