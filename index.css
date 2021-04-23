@@ -112,3 +112,18 @@ width: 60px;
 #thescore{
   font-family: 'VT323', monospace;
 }
+<<<<<<< HEAD
+=======
+
+@keyframes CdeathMove
+{ 
+    from { opacity   : 1; }
+    to   { opacity   : 0.20; }
+}
+
+@keyframes samdeathMove {
+    0% { left: 0;}
+    50%{ left : 100%;}
+    100%{ left: 0;}
+}
+>>>>>>> fae958f321cc788293ba0c824fd40622680316ca

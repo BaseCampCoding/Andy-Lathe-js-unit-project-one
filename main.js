@@ -5,13 +5,24 @@ const scoreCard = document.getElementById("thescore");
 const resetScore = document.getElementById("resetButton");
 const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
+const death = document.getElementById("death")
 const muteMusic = document.getElementById("mute");
+<<<<<<< HEAD
 const playSong = document.getElementById("playMusic")
 
 
 
 //Game logic ------------
 playSong.addEventListener("click",playMusic)
+=======
+const cowboy1 = document.getElementById("cowboy1");
+const samurai1 = document.getElementById("samurai1");
+let imageC = document.getElementById('cowboy1');
+let imageS = document.getElementById('samurai1');
+
+//Game logic ------------
+
+>>>>>>> fae958f321cc788293ba0c824fd40622680316ca
 function playMusic(){
     BigIron.play()
 }
@@ -29,9 +40,7 @@ resetScore.addEventListener("click", resetTheScore)
         scoreCard.innerHTML = `Score: ${scoreAmount}`
     }
 function fireTime(){
-    let imageC = document.getElementById('cowboy1')
     imageC.src = "cowboyStart1.png"
-    let imageS = document.getElementById('samurai1')
     imageS.src = "samuraiStart.png"
     let done = false
     testThing.innerHTML = "Hold"
@@ -40,9 +49,11 @@ function fireTime(){
     }
     const drawTimeout = setTimeout(drawTime, 1000); // After 1 second, users will have 1 second to draw
     function badFire(){
+        death.play()
         testThing.innerHTML = "Better luck next time. Click ready to play again.";
         clearTimeout(drawTimeout)
         imageS.src = "samuraiSwing.png"
+        cowboy1.style.animation="CdeathMove 2s";
         done = true
     }
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
@@ -54,6 +65,7 @@ function fireTime(){
             clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
                 testThing.innerHTML = "You did it! Click ready to play again";
+                samurai1.style.animation = "samdeathMove 2s"
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
             }
             else if(testThing.innerHTML === "Hold"){
