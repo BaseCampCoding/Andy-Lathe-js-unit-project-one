@@ -6,10 +6,12 @@ const resetScore = document.getElementById("resetButton");
 const BigIron = document.getElementById("bigIron");
 const bangSound = document.getElementById("bang");
 const muteMusic = document.getElementById("mute");
+const playSong = document.getElementById("playMusic")
 
 
 
 //Game logic ------------
+playSong.addEventListener("click",playMusic)
 function playMusic(){
     BigIron.play()
 }
@@ -55,7 +57,7 @@ function fireTime(){
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
             }
             else if(testThing.innerHTML === "Hold"){
-                testThing.innerHTML = "Too soon! Click ready to try again"
+                testThing.innerHTML = "Too soon! Click ready to try again"  
             }
         }
         fireButton.addEventListener("click", goodFire)
