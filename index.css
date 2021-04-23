@@ -108,8 +108,14 @@ width: 60px;
   font-family: 'VT323', monospace;
 }
 
-@keyframes deathMove
+@keyframes CdeathMove
 { 
     from { opacity   : 1; }
     to   { opacity   : 0.20; }
+}
+
+@keyframes samdeathMove {
+    0% { left: 0;}
+    50%{ left : 100%;}
+    100%{ left: 0;}
 }

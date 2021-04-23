@@ -8,10 +8,12 @@ const bangSound = document.getElementById("bang");
 const death = document.getElementById("death")
 const muteMusic = document.getElementById("mute");
 const cowboy1 = document.getElementById("cowboy1");
+const samurai1 = document.getElementById("samurai1");
 let imageC = document.getElementById('cowboy1');
 let imageS = document.getElementById('samurai1');
 
 //Game logic ------------
+
 function playMusic(){
     BigIron.play()
 }
@@ -38,12 +40,11 @@ function fireTime(){
     }
     const drawTimeout = setTimeout(drawTime, 1000); // After 1 second, users will have 1 second to draw
     function badFire(){
+        death.play()
         testThing.innerHTML = "Better luck next time. Click ready to play again.";
         clearTimeout(drawTimeout)
         imageS.src = "samuraiSwing.png"
-        death.play()
-        cowboy1.style.animation="deathMove 2s";
-        
+        cowboy1.style.animation="CdeathMove 2s";
         done = true
     }
     let tooLate = setTimeout(badFire, 2000); // If user doesn't hit in time, bad message
@@ -55,6 +56,7 @@ function fireTime(){
             clearTimeout(drawTimeout);
             if(testThing.innerHTML === "DRAW"){
                 testThing.innerHTML = "You did it! Click ready to play again";
+                samurai1.style.animation = "samdeathMove 2s"
                 scoreCard.innerHTML = `Score: ${scoreAmount}`
             }
             else if(testThing.innerHTML === "Hold"){
@@ -63,7 +65,7 @@ function fireTime(){
         }
         fireButton.addEventListener("click", goodFire)
     }
-    if(goodFire){
+    if(testThing.innerHTML = "You did it! Click ready to play again"){
         scoreAmount += 1     
     }
 }
