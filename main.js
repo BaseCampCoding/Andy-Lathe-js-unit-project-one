@@ -65,7 +65,7 @@ function fireTime(){
         }
         fireButton.addEventListener("click", goodFire)
     }
-    if(testThing.innerHTML = "You did it! Click ready to play again"){
+    if(goodFire){
         scoreAmount += 1     
     }
 }
