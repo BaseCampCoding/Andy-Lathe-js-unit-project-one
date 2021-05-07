@@ -7,6 +7,16 @@ body {
     background-image:url(gunfighter.jpg);
     background-size: cover;
 }
+
+#header{
+  display: flex;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 30px;
+  color: black;
+  padding-top: 1.5rem;
+  background-color: beige;
+}
 .gameboy {
   display: grid;
   height: 34rem;
